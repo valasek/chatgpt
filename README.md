@@ -1,10 +1,14 @@
 # Chat GPT
 
-Simple page using ChatGTP API
+Simple page using [ChatGTP API](https://platform.openai.com/docs/introduction) written using Rails 7.1.1. and Tailwind.
+
+**Video time 🎞️**
+
+[![Video](https://img.youtube.com/vi/Dxyr33f7UK8/hqdefault.jpg)](https://youtu.be/Dxyr33f7UK8)
 
 # How to start
 
-1. Register and create API key on https://platform.openai.com/docs/introduction
+1. Register and [create API](https://platform.openai.com/docs/introduction).
 
 2. Edit credentials in local:
 `EDITOR="nano" rails credentials:edit`
