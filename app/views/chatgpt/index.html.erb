@@ -1,18 +1,18 @@
 <div class="mx-auto">
-  <h1 class="font-bold text-4xl">Chat GPT</h1>
-  <p class="font-bold text-xl mb-10">Rails 7.2.2 test project using ChatGPT API</p>
+  <h1 class="font-bold text-4xl mb-5">Chat GPT</h1>
+  <p class="font-bold italic text-xl mb-10 text-gray-400">Rails 7.1.1 test project using ChatGPT API</p>
   
   <%= form_with url: "/chatgpt/message", method: :get do |form| %>
-    <%= form.label :query, "What is question?", class: "block mb-2 text-sm font-medium text-gray-900" %>
+    <%= form.label :question_label, "Type your question:", class: "block mb-2 text-sm font-medium text-gray-900" %>
     <div class="flex flex-row">
-      <%= form.text_field :query, class: "flex p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+      <%= form.text_field :question, class: "flex p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
       <%= form.submit "Send", class: "ml-2 flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
     </div>
   <% end %>
 
-  <p class="mt-10 block mb-2 text-sm font-medium text-gray-900">Chat GPT answer:</p>
+  <p class="mt-5 mb-2 text-sm font-medium text-gray-900">Chat GPT answer:</p>
   <div>
-    <%= message %>
+    <%= simple_format @response %>
   </div>
 
 </div>

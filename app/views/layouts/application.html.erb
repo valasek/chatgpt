@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chatgpt</title>
+    <title>Chat GPR</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,7 +12,13 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-10 px-5 gap-4">
+      <% flash.each do |name, msg| %>
+        <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 mt-10 mb-5" role="alert">
+          <p class="font-bold">Hmm, someting unusual happened 🔥 Feel free to <a href="https://github.com/valasek/chatgpt/issues" class="underline">report this issue on GitHub</a>.</p>
+          <%= msg %>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
   </body>

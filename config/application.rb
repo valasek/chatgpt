@@ -27,5 +27,11 @@ module Chatgpt
     # logger
     # config.logger = Logger.new(STDOUT)
     # config.log_level = :warn
+
+    # OpenAI.configure do |config|
+    #   config.access_token = Rails.application.credentials.openai.api_key
+    #   config.request_timeout = Rails.application.credentials.openai.request_timeout
+    # end
+
   end
 end

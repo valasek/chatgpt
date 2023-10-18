@@ -1,24 +1,14 @@
-# README
+# Chat GPT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple page using ChatGTP API
 
-Things you may want to cover:
+# How to start
 
-* Ruby version
+1. Register and create API key on https://platform.openai.com/docs/introduction
 
-* System dependencies
+2. Edit credentials in local:
+`EDITOR="nano" rails credentials:edit`
 
-* Configuration
+3. Start the server with `/bin/dev`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This code is based on the tutorial [Integrate OpenAI to Rails, Get started with OpenAI APIs](https://enlear.academy/integrate-openai-to-rails-3cd148786b49)
