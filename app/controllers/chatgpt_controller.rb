@@ -16,15 +16,10 @@ class ChatgptController < ApplicationController
         if openaiResponse.key?('error')
           flash[:notice] = openaiResponse['error']['message']
         else
-          logger.warn("budeme mit odpoved")
           @response = openaiResponse.dig("choices", 0, "message", "content")
-          logger.warn("mame odpoved #{response}")
-          logger.warn("koniec #{response}")
         end
     rescue => error
-      logger.warn("exception")
-      logger.warn(error.message)
-      response = "Error"
+      flash[:notice] = error.message
     end
     render :index
   end
